@@ -1,0 +1,91 @@
+Skip to content
+Chat history
+
+You said:
+Create a file called index.html with the following content:
+
+First and last name
+
+Course name
+
+Your major
+
+A short greeting message (e.g., "Welcome to my dynamic webpage!")
+
+JavaScript code that changes the background color of the page depending on the current time:
+
+Morning (6am–12pm): Color 1
+
+Afternoon (12pm–6pm): Color 2
+
+Evening (6pm–9pm): Color 3
+
+Night (9pm–6am): Color 4
+ChatGPT said:
+Here’s a complete index.html file with your requested content and the JavaScript code that changes the background color depending on the time of day:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Dynamic Webpage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      transition: background-color 0.5s ease;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>First Last</h1>
+  <p><strong>Course Name:</strong> Web Development 101</p>
+  <p><strong>Major:</strong> Computer Science</p>
+  <p>Welcome to my dynamic webpage!</p>
+
+  <script>
+    function setBackgroundColor() {
+      const now = new Date();
+      const hour = now.getHours();
+      let color = "";
+
+      if (hour >= 6 && hour < 12) {
+        // Morning (6am–12pm)
+        color = "#FFFAE3"; // Light yellow
+      } else if (hour >= 12 && hour < 18) {
+        // Afternoon (12pm–6pm)
+        color = "#E3F2FD"; // Light blue
+      } else if (hour >= 18 && hour < 21) {
+        // Evening (6pm–9pm)
+        color = "#FFDAB9"; // Peach
+      } else {
+        // Night (9pm–6am)
+        color = "#2C3E50"; // Dark blue/gray
+        document.body.style.color = "white"; // Better contrast at night
+      }
+
+      document.body.style.backgroundColor = color;
+    }
+
+    // Run when page loads
+    setBackgroundColor();
+  </script>
+</body>
+</html>
+👉 Just replace "First Last", "Web Development 101", and "Computer Science" with your actual details.
+
+Do you want me to also make it update live (e.g., if the user keeps the page open and the time of day changes, the background automatically updates), or just set it once on load?
+
+
+
+
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info.
