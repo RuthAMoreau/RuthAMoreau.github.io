@@ -1,0 +1,55 @@
+<HTML>
+<head>
+  <meta charset="UTF-8">
+  <title>Time-Based Image Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    img {
+      width: 400px;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+	<H1>My Basic HTML Website</H1>
+	<p>My Name: Ruth Moreau </p>
+	<p>Course Name: COP4813: Web Applications Programming</p>
+	<p>Major: Computer Science
+  	<p>Welcome! This page shows a different image depending on the current time of day.</p>
+
+ <div>
+ 	<img id="timeImage" src="" alt="Time-based image">
+ </div>
+
+ <script>
+ 	function updateImage() {
+      		const hour = new Date().getHours();
+      		const image = document.getElementById("timeImage");
+
+      	if (hour >= 6 && hour < 12) {
+        	// Morning
+        	image.src = "https://unsplash.com/photos/waves-of-body-of-water-splashing-on-sand-mBQIfKlvowM"; 
+        	image.alt = "Morning Sunrise";
+      	} else if (hour >= 12 && hour < 18) {
+       		// Afternoon
+        	image.src = "https://unsplash.com/photos/a-light-house-on-a-rocky-cliff-overlooking-the-ocean-gJZiSa4Mom8"; 
+        	image.alt = "Afternoon Sunshine";
+      	} else {
+        	// Evening/Night
+        	image.src = "https://unsplash.com/photos/black-and-brown-bridge-bridge-6GY9TZRHYDY";
+        	image.alt = "Night Sky";
+      	}
+    }
+
+    updateImage();
+  </script>
+</body>
+</html>
