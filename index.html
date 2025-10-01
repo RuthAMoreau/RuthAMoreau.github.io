@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Dynamic Webpage</title>
+
+</head>
+<body>
+<h1>My Dynamic Website</H1>
+<p>My Name: Ruth Moreau </p>
+<p>Course Name: COP4813: Web Applications Programming</p>
+<p>Major: Computer Science
+<p>Welcome to my dynamic webpage!</p>
+
+
+  <script>
+    function setBackgroundColor() {
+      const now = new Date();
+      const hour = now.getHours();
+      let color = "";
+
+      if (hour >= 6 && hour < 12) {
+        // Morning (6am–12pm)
+        color = "#FFFAE3"; // Light yellow
+      } else if (hour >= 12 && hour < 18) {
+        // Afternoon (12pm–6pm)
+        color = "#E3F2FD"; // Light blue
+      } else if (hour >= 18 && hour < 21) {
+        // Evening (6pm–9pm)
+        color = "#FFDAB9"; // Peach
+      } else {
+        // Night (9pm–6am)
+        color = "#2C3E50"; // Dark blue/gray
+        document.body.style.color = "white"; // Better contrast at night
+      }
+
+      document.body.style.backgroundColor = color;
+    }
+
+    // Run when page loads
+    setBackgroundColor();
+  </script>
+</body>
+</html>
