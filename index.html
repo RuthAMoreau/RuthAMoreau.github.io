@@ -1,4 +1,5 @@
-<HTML>
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Time-Based Image Display</title>
@@ -19,37 +20,38 @@
   </style>
 </head>
 <body>
-	<H1>My Basic HTML Website</H1>
-	<p>My Name: Ruth Moreau </p>
-	<p>Course Name: COP4813: Web Applications Programming</p>
-	<p>Major: Computer Science
-  	<p>Welcome! This page shows a different image depending on the current time of day.</p>
+  <h1>My Basic HTML Website</h1>
+  <p>My Name: Ruth Moreau</p>
+  <p>Course Name: COP4813: Web Applications Programming</p>
+  <p>Major: Computer Science</p>
+  <p>Welcome! This page shows a different image depending on the current time of day.</p>
 
- <div>
- 	<img id="timeImage" src="" alt="Time-based image">
- </div>
+  <div>
+    <img id="timeImage" src="" alt="Time-based image">
+  </div>
 
- <script>
- 	function updateImage() {
-      		const hour = new Date().getHours();
-      		const image = document.getElementById("timeImage");
+  <script>
+    function updateImage() {
+      const hour = new Date().getHours();
+      const image = document.getElementById("timeImage");
 
-      	if (hour >= 6 && hour < 12) {
-        	// Morning
-        	image.src = "https://unsplash.com/photos/waves-of-body-of-water-splashing-on-sand-mBQIfKlvowM"; 
-        	image.alt = "Morning Sunrise";
-      	} else if (hour >= 12 && hour < 18) {
-       		// Afternoon
-        	image.src = "https://unsplash.com/photos/a-light-house-on-a-rocky-cliff-overlooking-the-ocean-gJZiSa4Mom8"; 
-        	image.alt = "Afternoon Sunshine";
-      	} else {
-        	// Evening/Night
-        	image.src = "https://unsplash.com/photos/black-and-brown-bridge-bridge-6GY9TZRHYDY";
-        	image.alt = "Night Sky";
-      	}
+      if (hour >= 6 && hour < 12) {
+        // Morning
+        image.src = "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80";
+        image.alt = "Morning Sunrise";
+      } else if (hour >= 12 && hour < 18) {
+        // Afternoon
+        image.src = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80";
+        image.alt = "Afternoon Sunshine";
+      } else {
+        // Evening/Night
+        image.src = "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80";
+        image.alt = "Night Sky";
+      }
     }
 
     updateImage();
   </script>
 </body>
 </html>
+
