@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<HTML>
 <head>
   <meta charset="UTF-8">
   <title>Time-Based Image Display</title>
@@ -20,33 +19,34 @@
   </style>
 </head>
 <body>
-  <h1>Your Name Here</h1>
-  <p><strong>Course:</strong> Web Development Fundamentals</p>
-  <p><strong>Major:</strong> Computer Science</p>
-  <p>Welcome! This page shows a different image depending on the current time of day.</p>
+	<H1>My Basic HTML Website</H1>
+	<p>My Name: Ruth Moreau </p>
+	<p>Course Name: COP4813: Web Applications Programming</p>
+	<p>Major: Computer Science
+  	<p>Welcome! This page shows a different image depending on the current time of day.</p>
 
-  <div>
-    <img id="timeImage" src="" alt="Time-based image">
-  </div>
+ <div>
+ 	<img id="timeImage" src="" alt="Time-based image">
+ </div>
 
-  <script>
-    function updateImage() {
-      const hour = new Date().getHours();
-      const image = document.getElementById("timeImage");
+ <script>
+ 	function updateImage() {
+      		const hour = new Date().getHours();
+      		const image = document.getElementById("timeImage");
 
-      if (hour >= 6 && hour < 12) {
-        // Morning
-        image.src = "https://unsplash.com/photos/waves-of-body-of-water-splashing-on-sand-mBQIfKlvowM"; 
-        image.alt = "Morning Sunrise";
-      } else if (hour >= 12 && hour < 18) {
-        // Afternoon
-        image.src = "https://unsplash.com/photos/a-light-house-on-a-rocky-cliff-overlooking-the-ocean-gJZiSa4Mom8"; 
-        image.alt = "Afternoon Sunshine";
-      } else {
-        // Evening/Night
-        image.src = "https://unsplash.com/photos/black-and-brown-bridge-bridge-6GY9TZRHYDY";
-        image.alt = "Night Sky";
-      }
+      	if (hour >= 6 && hour < 12) {
+        	// Morning
+        	image.src = "https://unsplash.com/photos/waves-of-body-of-water-splashing-on-sand-mBQIfKlvowM"; 
+        	image.alt = "Morning Sunrise";
+      	} else if (hour >= 12 && hour < 18) {
+       		// Afternoon
+        	image.src = "https://unsplash.com/photos/a-light-house-on-a-rocky-cliff-overlooking-the-ocean-gJZiSa4Mom8"; 
+        	image.alt = "Afternoon Sunshine";
+      	} else {
+        	// Evening/Night
+        	image.src = "https://unsplash.com/photos/black-and-brown-bridge-bridge-6GY9TZRHYDY";
+        	image.alt = "Night Sky";
+      	}
     }
 
     updateImage();
