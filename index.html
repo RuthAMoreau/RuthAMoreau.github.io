@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subject Topics</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Subjects</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Welcome to the Learning Hub</h1>
+  <p>Select a subject to explore topics:</p>
 
-    <main class="container">
-        <h1>Educational Subjects</h1>
-        
-        <!-- Mathematics Section -->
-        <section>
-            <!-- The `onclick` event calls the JavaScript function to show/hide the list -->
-            <div class="subject" onclick="toggleTopics('math-topics')">
-                <h2><a></a>Mathematics</a></h2>
-            </div>
-            <!-- The topics are hidden by default via the CSS file -->
-            <ul class="topics-list" id="math-topics">
-                <li>Algebra</li>
-                <li>Geometry</li>
-                <li>Calculus</li>
-                <li>Statistics</li>
-            </ul>
-        </section>
+  <div class="subjects">
+    <!-- Mathematics -->
+    <div class="subject" onclick="toggleTopics('math-topics')">Mathematics</div>
+    <ul id="math-topics" class="topics">
+      <li><a href="math/algebra.html">Algebra</a></li>
+      <li><a href="math/geometry.html">Geometry</a></li>
+      <li><a href="math/calculus.html">Calculus</a></li>
+      <li><a href="math/statistics.html">Statistics</a></li>
+    </ul>
 
-        <!-- Science Section -->
-        <section>
-            <div class="subject" onclick="toggleTopics('science-topics')">
-                <h2>Science</h2>
-            </div>
-            <ul class="topics-list" id="science-topics">
-                <li>Physics</li>
-                <li>Chemistry</li>
-                <li>Biology</li>
-                <li>Astronomy</li>
-            </ul>
-        </section>
+    <!-- Science -->
+    <div class="subject" onclick="toggleTopics('science-topics')">Science</div>
+    <ul id="science-topics" class="topics">
+      <li><a href="science/physics.html">Physics</a></li>
+      <li><a href="science/chemistry.html">Chemistry</a></li>
+      <li><a href="science/biology.html">Biology</a></li>
+      <li><a href="science/astronomy.html">Astronomy</a></li>
+    </ul>
 
-        <!-- History Section -->
-        <section>
-            <div class="subject" onclick="toggleTopics('history-topics')">
-                <h2>History</h2>
-            </div>
-            <ul class="topics-list" id="history-topics">
-                <li>Ancient Civilizations</li>
-                <li>World Wars</li>
-                <li>American History</li>
-                <li>European History</li>
-            </ul>
-        </section>
-    </main>
+    <!-- History -->
+    <div class="subject" onclick="toggleTopics('history-topics')">History</div>
+    <ul id="history-topics" class="topics">
+      <li><a href="history/ancient.html">Ancient History</a></li>
+      <li><a href="history/medieval.html">Medieval History</a></li>
+      <li><a href="history/modern.html">Modern History</a></li>
+      <li><a href="history/american.html">American History</a></li>
+    </ul>
+  </div>
 
-    <!-- The JavaScript file is included at the end of the body for faster loading -->
-    <script src="script.js"></script>
+  <script>
+    function toggleTopics(id) {
+      const allTopics = document.querySelectorAll('.topics');
+      allTopics.forEach(t => {
+        if (t.id !== id) {
+          t.style.display = 'none'; // hide other topic lists
+        }
+      });
 
+      const selected = document.getElementById(id);
+      selected.style.display = (selected.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
-
